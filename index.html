@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework3</title>
+    <body>
+        <script>
+            var userAge = prompt('Сколько тебе лет?');
+            var age1 = ' год';
+            var age2 = ' года';
+            var age3 = ' лет';
+            if (/[^0-9]/.test(userAge)) {
+                console.log('Введите только число!');
+            } else if ((userAge%10 === 0) || ((userAge%10 >= 5) && (userAge%10 <=9)) || ((userAge%100 >= 11) && (userAge%100 <= 14))) {
+                console.log(userAge + age3);
+            } else if ((userAge%10 == 2) || (userAge%10 == 3) || (userAge%10 == 4)) {
+                console.log(userAge + age2)
+            } else if (userAge%10 == 1) {
+                console.log(userAge + age1);
+            }
+        </script>
+    </body>
+</head>
